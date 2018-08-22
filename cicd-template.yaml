@@ -183,7 +183,7 @@ objects:
                   }
                 }
               }
-              stage('Promote to STAGE?') {
+              stage('Promote to STAGE') {
 #                steps {
 #                  timeout(time:15, unit:'MINUTES') {
 #                      input message: "Promote to STAGE?", ok: "Promote"
