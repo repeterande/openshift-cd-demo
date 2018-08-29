@@ -184,11 +184,7 @@ objects:
                 }
               }
               stage('Promote to STAGE') {
-#                steps {
-#                  timeout(time:15, unit:'MINUTES') {
-#                      input message: "Promote to STAGE?", ok: "Promote"
-#                  }
-
+                steps {
                   script {
                     openshift.withCluster() {
                       openshift.tag("${env.DEV_PROJECT}/tasks:latest", "${env.STAGE_PROJECT}/tasks:${version}")
